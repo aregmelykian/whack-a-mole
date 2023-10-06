@@ -38,6 +38,12 @@ h2 {
     color: black;
 }
 
+#score{
+    color: red;
+    font-size: 45px;
+    -webkit-text-stroke: 1px black;
+}
+
 .grid {
   width: 600px;
   height: 400px;

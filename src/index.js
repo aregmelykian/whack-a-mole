@@ -5,7 +5,7 @@ const difficultySelect = document.querySelector('#difficulty');
 const score = document.querySelector('#score');
 const timerDisplay = document.querySelector('#timer');
 
-const audioHit = new Audio('../assets/hit.mp3');
+const audioHit = new Audio('https://github.com/gabrielsanchez/erddiagram/blob/main/hit.mp3?raw=true');
 
 let time = 0;
 let timer;
