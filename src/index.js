@@ -1,14 +1,17 @@
 const holes = document.querySelectorAll('.hole');
 const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
+const difficultySelect = document.querySelector('#difficulty');
 const score = document.querySelector('#score');
 const timerDisplay = document.querySelector('#timer');
+
+const audioHit = new Audio('../assets/hit.mp3');
 
 let time = 0;
 let timer;
 let lastHole = 0;
 let points = 0;
-let difficulty = "hard";
+let difficulty = "easy";
 
 /**
  * Generates a random integer within a range.
@@ -205,6 +208,7 @@ function startTimer() {
 *
 */
 function whack(event) {
+  audioHit.play();
   return updateScore();
 }
 
@@ -260,6 +264,9 @@ function startGame(){
 }
 
 startButton.addEventListener("click", startGame);
+difficultySelect.addEventListener("change", () => {
+  difficulty = difficultySelect.value
+});
 
 
 // Please do not modify the code below.
